@@ -1,0 +1,23 @@
+<html>
+<head>
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+  <button onclick="fj.feedHelper.loadRss()">Load rss</button>
+
+  <div class="only-public">
+    <a href="https://accounts.google.com/o/oauth2/auth?response_type=token&client_id=983416106847-0s22qk7qvcmgtukb23b3cn2nnfl62mji.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/blogger&redirect_uri=http://localhost:24242">Login Google</a>
+  </div>
+  <div class="only-secured">
+    <button>Load secured</button>
+  </div>
+  <div id="feed"></div>
+  
+  <!-- <script src="//code.jquery.com/jquery-2.1.1.js"></script> -->
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="js/app-helper.js"></script>
+  <script src="js/req-helper.js"></script>
+  <script src="js/feed-helper.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
