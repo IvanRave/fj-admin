@@ -2,4 +2,43 @@
   display: none
 }
 
+#login-btn {
+  display: none
+}
+
 .only-public {}
+
+.job-section {
+  background: #A5DF00;
+  border: 2px dashed #9A2EFE;
+  margin: 4px;
+  padding: 4px;
+}
+
+.btn {
+  background: #6db9e8;
+  background-image: -webkit-linear-gradient(top, #6db9e8, #035a8c);
+  background-image: -moz-linear-gradient(top, #6db9e8, #035a8c);
+  background-image: -ms-linear-gradient(top, #6db9e8, #035a8c);
+  background-image: -o-linear-gradient(top, #6db9e8, #035a8c);
+  background-image: linear-gradient(to bottom, #6db9e8, #035a8c);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #7cfc3c;
+  background-image: -webkit-linear-gradient(top, #7cfc3c, #91d934);
+  background-image: -moz-linear-gradient(top, #7cfc3c, #91d934);
+  background-image: -ms-linear-gradient(top, #7cfc3c, #91d934);
+  background-image: -o-linear-gradient(top, #7cfc3c, #91d934);
+  background-image: linear-gradient(to bottom, #7cfc3c, #91d934);
+  text-decoration: none;
+}
+
+#loader {
+  display: none;
+}

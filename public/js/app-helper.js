@@ -18,18 +18,26 @@ window.fj = window.fj || {};
 	};
 
 	app.helper.showElems = function (elems) {
-    console.log('showelems', elems);
+		console.log('showelems', elems);
 		for (var i = 0; i < elems.length; i += 1) {
-      console.log(elems[i].style.display);
+			console.log(elems[i].style.display);
 			elems[i].style.display = 'block';
 		}
 	};
 
 	app.helper.hideElems = function (elems) {
-    console.log('hideelems', elems);
+		console.log('hideelems', elems);
 		for (var i = 0; i < elems.length; i += 1) {
-    console.log(elems[i].style.display);
+			console.log(elems[i].style.display);
 			elems[i].style.display = 'none';
 		}
+	};
+
+	app.helper.showLoader = function () {
+		document.getElementById('loader').style.display = 'block';
+	};
+
+	app.helper.hideLoader = function () {
+		document.getElementById('loader').style.display = 'none';
 	};
 })(window.fj);

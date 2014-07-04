@@ -8,7 +8,26 @@ window.fj = window.fj || {};
 (function (app) {
 	app.reqHelper = {};
 
-	var cbkOnReady = function (req, e) {
+	var cbkOnReadyJSON = function (req, next) {
+		// readyState: возвращает текущее состояние объекта
+		// (0 — неинициализирован,
+		// 1 — открыт,
+		// 2 — отправка данных,
+		// 3 — получение данных и
+		// 4 — данные загружены)
+		if (req.readyState === 4) {
+			if (req.status === 200) {
+				next(JSON.parse(req.responseText));
+			} else if (req.status === 401) {
+				window.location.hash = '';
+				alert('Authorization is expired. Please update the page and re-login');
+			} else {
+				alert('Error: ' + req.readyState + ' ' + req.status);
+			}
+		}
+	};
+
+	var cbkOnReadyXml = function (req, e) {
 		// readyState: возвращает текущее состояние объекта
 		// (0 — неинициализирован,
 		// 1 — открыт,
@@ -26,34 +45,49 @@ window.fj = window.fj || {};
 		var req = new XMLHttpRequest();
 		req.open('GET', 'data/rss-list.xml');
 
-		req.onreadystatechange = cbkOnReady.bind(null, req);
+		req.onreadystatechange = cbkOnReadyXml.bind(null, req);
 		req.send(null);
 	};
 
-	app.reqHelper.jsonp = function (url, callback) {
-		var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
-		window[callbackName] = function (data) {
-			delete window[callbackName];
-			document.body.removeChild(script);
-			callback(data);
-		};
+	app.reqHelper.execBlogger = function (reqUrl, reqMethod, reqData, next) {
+		if (!app.auth.accessToken) {
+			alert('No auth');
+			return;
+		}
 
-		var script = document.createElement('script');
-		script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
-		document.body.appendChild(script);
-	};
+		var reqDataStr = JSON.stringify(reqData);
 
-	app.reqHelper.loadBlogger = function (accessToken) {
+		// todo: #33! check date and expires
+
 		// And send the token over to the server
 		var req = new XMLHttpRequest();
 
-		var url = 'https://www.googleapis.com/blogger/v3/users/self/blogs?access_token=' + accessToken;
+		reqUrl += '?access_token=' + app.auth.accessToken;
 
 		// consider using POST so query isn't logged
-		req.open('GET', url);
+		req.open(reqMethod, reqUrl);
 
-		req.onreadystatechange = cbkOnReady.bind(null, req);
+		//req.setRequestHeader('authorization', 'BEARER ' + app.auth.accessToken);
+		req.setRequestHeader("Content-type", "application/json");
+		// req.setRequestHeader("Content-length", reqDataStr.length);
 
-		req.send(null);
+		req.onreadystatechange = cbkOnReadyJSON.bind(null, req, next);
+
+		req.send(reqDataStr);
+	};
+
+	app.reqHelper.postBlog = function (blogId, blogTitle, blogContent, next) {
+		var url = 'https://www.googleapis.com/blogger/v3/blogs/' + blogId + '/posts';
+
+		var data = {
+			"kind" : "blogger#post",
+			"blog" : {
+				"id" : blogId
+			},
+			"title" : blogTitle,
+			"content" : blogContent
+		};
+
+		app.reqHelper.execBlogger(url, 'POST', data, next);
 	};
 })(window.fj);

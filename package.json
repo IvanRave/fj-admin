@@ -1,14 +1,17 @@
 {
-  "name": "funjobs",
-  "version": "0.0.0",
-  "description": "0.1.0",
+  "name": "fj-admin",
+  "version": "0.2.0",
+  "description": "fj-admin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "IvanRave",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-gh-pages": "^0.9.1"
   }
 }
