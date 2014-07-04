@@ -69,7 +69,9 @@ window.fj = window.fj || {};
 		} else {
 
 			// http://localhost:24242
-			var appUrl = window.location.protocol + '//' + window.location.host;
+			var appUrl = app.cnst.AUTH_REDIRECT_URL;
+			// for localhost path check it
+			//= window.location.protocol + '//' + window.location.host;
 			// Show login button
 			var loginUrl = app.cnst.GOOGLE_AUTH_URL + '?response_type=token&client_id=' + app.cnst.CLIENT_ID + '&scope=' + app.cnst.CLIENT_SCOPE + '&redirect_uri=' + appUrl;
 			var loginBtn = document.getElementById('login-btn');
