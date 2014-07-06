@@ -23,6 +23,7 @@ window.fj = window.fj || {};
 		btn.appendChild(document.createTextNode((rssObj.city || '') + ' ' + rssObj.site));
 
 		btn.onclick = function () {
+      btn.style.display = 'none';
 			app.feedHelper.loadRss(rssObj.url);
 		};
 

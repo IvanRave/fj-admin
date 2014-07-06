@@ -4,7 +4,7 @@ window.fj = window.fj || {};
 
 	app.cnst = {
 		'GOOGLE_AUTH_URL' : 'https://accounts.google.com/o/oauth2/auth',
-    'AUTH_REDIRECT_URL' : 'https://ivanrave.github.io/fj-admin/',
+		'AUTH_REDIRECT_URL' : 'https://ivanrave.github.io/fj-admin/',
 		'CLIENT_ID' : '983416106847-0s22qk7qvcmgtukb23b3cn2nnfl62mji.apps.googleusercontent.com',
 		'CLIENT_SCOPE' : 'https://www.googleapis.com/auth/blogger',
 		'BLOG_ID' : '7235680921074654464',
@@ -153,57 +153,65 @@ window.fj = window.fj || {};
 			"брокер",
 			"арматурщик"],
 		"RSSES" : [{
-				"url" : "http://hh.ru/search/vacancy/rss?clusters=true&area=1",
-				"city" : "Москва",
-				"site" : "http://hh.ru/"
-			}, {
-				"url" : "http://spb.hh.ru/search/vacancy/rss?clusters=true&area=2",
-				"city" : "Санкт-Петербург",
-				"site" : "http://hh.ru/"
-			}, {
-				"url" : "http://rostov.hh.ru/search/vacancy/rss?clusters=true&area=76",
-				"city" : "Ростов-на-Дону",
-				"site" : "http://hh.ru/"
-			}, {
-				"url" : "http://krasnodar.hh.ru/search/vacancy/rss?clusters=true&area=53",
-				"city" : "Краснодар",
-				"site" : "http://hh.ru"
-			}, {
-				"url" : "http://sochi.hh.ru/search/vacancy/rss?clusters=true&area=237",
-				"city" : "Сочи",
-				"site" : "http://hh.ru/"
-			}, {
-				"url" : "http://kiev.hh.ua/search/vacancy/rss?clusters=true&area=115",
-				"city" : "Киев",
-				"site" : "http://hh.ru/"
-			}, {
-				"url" : "http://kazan.hh.ru/rss/searchvacancy.xml?orderBy=2&itemsOnPage=200&areaId=227&professionalAreaId=0&compensationCurrencyCode=RUR&searchPeriod=30",
-				"city" : "Казань",
-				"site" : "http://hh.ru/"
-			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=4",
 				"city" : "Москва",
-				"site" : "http://www.superjob.ru/"
+				"site" : "www.superjob.ru"
 			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=14",
 				"city" : "Санкт-Петербург",
-				"site" : "http://www.superjob.ru/"
+				"site" : "www.superjob.ru"
 			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=73",
 				"city" : "Ростов-на-Дону",
-				"site" : "http://www.superjob.ru/"
+				"site" : "www.superjob.ru"
 			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=25",
 				"city" : "Краснодар",
-				"site" : "http://www.superjob.ru/"
+				"site" : "www.superjob.ru"
 			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=745",
 				"city" : "Сочи",
-				"site" : "http://www.superjob.ru/"
+				"site" : "www.superjob.ru"
+			}, {
+				"url" : "http://rss.superjob.ru/vacancy/search/?town=420",
+				"city" : "Киев",
+				"site" : "www.superjob.ru"
+			}, {
+				"url" : "http://rss.superjob.ru/vacancy/search/?town=511",
+				"city" : "Черкассы",
+				"site" : "www.superjob.ru"
+			}, {
+				"url" : "http://hh.ru/search/vacancy/rss?clusters=true&area=1",
+				"city" : "Москва",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://spb.hh.ru/search/vacancy/rss?clusters=true&area=2",
+				"city" : "Санкт-Петербург",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://rostov.hh.ru/search/vacancy/rss?clusters=true&area=76",
+				"city" : "Ростов-на-Дону",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://krasnodar.hh.ru/search/vacancy/rss?clusters=true&area=53",
+				"city" : "Краснодар",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://sochi.hh.ru/search/vacancy/rss?clusters=true&area=237",
+				"city" : "Сочи",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://kiev.hh.ua/search/vacancy/rss?clusters=true&area=115",
+				"city" : "Киев",
+				"site" : "hh.ru"
+			}, {
+				"url" : "http://kazan.hh.ru/rss/searchvacancy.xml?orderBy=2&itemsOnPage=200&areaId=227&professionalAreaId=0&compensationCurrencyCode=RUR&searchPeriod=30",
+				"city" : "Казань",
+				"site" : "hh.ru"
 			}, {
 				"url" : "http://jobselector.com/vacancy/list/0/122.xml",
-				"site" : "http://jobselector.com/",
-				"city" : "Санкт-Петербург"
+				"city" : "Санкт-Петербург",
+				"site" : "jobselector.com"
 			}, {
 				"url" : "http://www.rabota.ru/v3_rssExport.html?wt=f&c=1&ot=t&cu=2&p=7&d=desc&fv=f&rc=9019&new=1&t=1&country=1&c_rus=&c_ukr=41&c_ec=133&pp=20&sm=103",
 				"city" : "Москва",
@@ -241,19 +249,15 @@ window.fj = window.fj || {};
 				"city" : "Краснодар",
 				"site" : "http://www.zarplata.ru/"
 			}, {
-				"url" : "http://rabota.slando.ru/moscow/rss/28.xml",
-				"city" : "Москва",
-				"site" : "http://rabota.slando.ru/"
-			}, {
-				"url" : "http://www.free-lance.ru/rss/all.xml",
-				"site" : "http://www.free-lance.ru/"
+				"url" : "https://www.fl.ru/rss/all.xml",
+				"site" : "www.fl.ru"
 			}, {
 				"url" : "http://www.weblancer.net/rss/projects.rss",
 				"site" : "http://www.weblancer.net/"
 			}, {
 				"url" : "http://krasnoyarsk.hh.ru/rss/searchvacancy.xml?orderBy=2&itemsOnPage=200&areaId=221&professionalAreaId=0&compensationCurrencyCode=RUR&searchPeriod=30",
 				"city" : "Красноярск",
-				"site" : "http://hh.ru/"
+				"site" : "hh.ru"
 			}, {
 				"url" : "http://free-lancers.net/rss/projects/",
 				"site" : "http://free-lancers.net/"
@@ -270,29 +274,25 @@ window.fj = window.fj || {};
 			}, {
 				"url" : "http://kaluga.hh.ru/rss/searchvacancy.xml?orderBy=2&itemsOnPage=200&areaId=1859&professionalAreaId=0&compensationCurrencyCode=RUR&searchPeriod=30",
 				"city" : "Калуга",
-				"site" : "http://hh.ru/"
+				"site" : "hh.ru"
 			}, {
-				"url" : "http://jobster.ru/xml?q=&ps=250&city=msk",
+				"url" : "http://jobselector.com/vacancy/list/0/82.xml",
 				"city" : "Москва",
-				"site" : "http://jobster.ru"
+				"site" : "jobselector.com"
 			}, {
-				"url" : "http://jobselector.com/vacancy/list/rss/0/82",
-				"city" : "Москва",
-				"site" : "http://jobselector.com/"
-			}, {
-				"url" : "http://jobselector.com/vacancy/list/rss/0/122",
+				"url" : "http://jobselector.com/vacancy/list/0/122.xml",
 				"city" : "Санкт-Петербург",
 				"site" : "http://jobselector.com/"
 			}, {
-				"url" : "http://jobselector.com/vacancy/list/rss/0/119",
+				"url" : "http://jobselector.com/vacancy/list/0/119.xml",
 				"city" : "Ростов-на-Дону",
 				"site" : "http://jobselector.com/"
 			}, {
-				"url" : "http://jobselector.com/vacancy/list/rss/0/70",
+				"url" : "http://jobselector.com/vacancy/list/0/70.xml",
 				"city" : "Краснодар",
 				"site" : "http://jobselector.com/"
 			}, {
-				"url" : "http://jobselector.com/vacancy/list/rss/0/132",
+				"url" : "http://jobselector.com/vacancy/list/0/132.xml",
 				"city" : "Сочи",
 				"site" : "http://jobselector.com/"
 			}, {
@@ -305,9 +305,6 @@ window.fj = window.fj || {};
 				"url" : "http://www.revolance.ru/rss/projects/",
 				"site" : "http://www.revolance.ru"
 			}, {
-				"url" : "http://www.acula.org/feed/newprojects.xml",
-				"site" : "http://www.acula.org"
-			}, {
 				"url" : "http://rss.superjob.ru/vacancy/search/?town=56",
 				"city" : "Хабаровск",
 				"site" : "http://www.superjob.ru/"
@@ -318,11 +315,7 @@ window.fj = window.fj || {};
 				"url" : "http://vingrad.ru/rss.php?mode=projects&tp=freelance",
 				"site" : "http://vingrad.ru"
 			}, {
-				"url" : "http://job.e-sochi.ru/vacancy.rss",
-				"city" : "Сочи",
-				"site" : "http://job.e-sochi.ru/"
-			}, {
-				"url" : "http://www.free-lancing.ru/rss/rss.php",
+				"url" : "http://www.free-lancing.ru/xmlFeed/rss.xml",
 				"site" : "http://www.free-lancing.ru/"
 			}, {
 				"url" : "http://www.dowork.ru/RSS/Projects.ashx",
@@ -343,9 +336,6 @@ window.fj = window.fj || {};
 				"url" : "http://www.freelancer.com/rss.xml",
 				"site" : "http://www.freelancer.com"
 			}, {
-				"url" : "http://webfreelance.ru/rssfeed.php?x=50",
-				"site" : "http://webfreelance.ru/"
-			}, {
 				"url" : "http://top-lance.ru/project/rss",
 				"site" : "http://top-lance.ru/"
 			}, {
@@ -360,11 +350,11 @@ window.fj = window.fj || {};
 				"city" : "Санкт-Петербург",
 				"site" : "http://craigslist.org/"
 			}, {
-				"url" : "http://www.careerist.ru/Vacancy/RssSearch/?keywords=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9&adv=0",
+				"url" : "http://www.careerist.ru/scr/rss/generate_vacsearch/?text=&p_region%5B0%5D=12&city%5B0%5D=38&sort_mode=time&sort_order=1",
 				"city" : "Москва",
 				"site" : "http://careerist.ru/"
 			}, {
-				"url" : "http://spb.careerist.ru/Vacancy/RssSearch/?keywords=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9&adv=0",
+				"url" : "http://www.careerist.ru/scr/rss/generate_vacsearch/?text=&category=0&objectID=&newCity=&p_region%5B0%5D=14&city%5B0%5D=282&employ=50&salaryfrom=&experience=0&time=30&sort_mode=time&sort_order=1",
 				"city" : "Санкт-Петербург",
 				"site" : "http://careerist.ru/"
 			}, {

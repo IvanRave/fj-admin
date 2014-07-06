@@ -4,6 +4,6 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(process.env.PORT || 24242, function(){
-  console.log('app listenning... 24242');
+app.listen(process.env.PORT || 24242, function () {
+	console.log('app listenning... 24242');
 });
