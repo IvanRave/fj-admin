@@ -30,7 +30,7 @@ window.fj = window.fj || {};
 	var cbkClickPost = function (btnPost, entry, resultPostLink) {
 		console.log(JSON.stringify(entry));
     
-    btnPost.style.display = 'none';
+    btnPost.disabled = true;
 
 		app.reqHelper.postBlog(app.cnst.BLOG_ID, entry.title, entry.content,
 			handlePostedBlog.bind(null, resultPostLink));
