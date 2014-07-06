@@ -27,8 +27,10 @@ window.fj = window.fj || {};
 		resultPostLink.appendChild(document.createTextNode('result link to edit'));
 	};
 
-	var cbkClickPost = function (entry, resultPostLink) {
+	var cbkClickPost = function (btnPost, entry, resultPostLink) {
 		console.log(JSON.stringify(entry));
+    
+    btnPost.style.display = 'none';
 
 		app.reqHelper.postBlog(app.cnst.BLOG_ID, entry.title, entry.content,
 			handlePostedBlog.bind(null, resultPostLink));
@@ -56,7 +58,7 @@ window.fj = window.fj || {};
 		var btnPost = document.createElement('button');
 
 		btnPost.appendChild(document.createTextNode('Post'));
-		btnPost.onclick = cbkClickPost.bind(null, entry, resultPostLink);
+		btnPost.onclick = cbkClickPost.bind(null, btnPost, entry, resultPostLink);
 
 		blockPost.appendChild(btnPost);
 		blockPost.appendChild(resultPostLink);
