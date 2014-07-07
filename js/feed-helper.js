@@ -32,7 +32,7 @@ window.fj = window.fj || {};
     
     btnPost.disabled = true;
 
-		app.reqHelper.postBlog(app.cnst.BLOG_ID, entry.title, entry.content,
+		app.reqHelper.postBlog(app.cnst.blog.BLOG_ID, entry.title, entry.content,
 			handlePostedBlog.bind(null, resultPostLink));
 	};
 
@@ -148,7 +148,7 @@ window.fj = window.fj || {};
 		var feed = new google.feeds.Feed(rssUrl);
 		//.setNumEntries(num) sets the number of feed entries loaded by this feed to num.
 		// By default, the Feed class loads four entries.
-		feed.setNumEntries(app.cnst.NUM_ENTRIES_TO_LOAD);
+		feed.setNumEntries(app.cnst.blog.NUM_ENTRIES_TO_LOAD);
 
 		app.helper.showLoader();
 		feed.load(cbkLoadFeed);
